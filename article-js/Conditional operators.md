@@ -11,19 +11,24 @@ Pour ce faire, nous pouvons utiliser l'operateur 'if' et l'opérateur conditione
  **Par exemple:**
 
  '''
+
 let year = prompt('In which year was ECMAScript-2015 specification published?', '');
 
 if (year == 2015) alert( 'You are right!' );
+
 '''
 
 Dans l'exemple ci dessus la condition est un simple contrôle d'égalité (année == 2015) mais il peut être beaucoup plus complexe.
 
 Si nous voulons executer plus d'une instruction nous devons envelopper notre bloc de code dans des accolades.
+
  '''
+
  if (year == 2015) {
   alert( "That's correct!" );
   alert( "You're so smart!" );
 }
+
 '''
 
 Il est cependant recommander de placer votre bloc de code entre accolades à chaques fois que vous utilisez une instruction "if" 
@@ -59,7 +64,9 @@ if (cond) {
 **L'instruction "if" peut contenir un bloc optionnel "else" .** **Il s'éxécute lorsque la condition est fausse**
 
 **Par exemple:**
+
 '''
+
 let year = prompt('In which year was the ECMAScript-2015 specification published?', '');
 
 if (year == 2015) {
@@ -67,7 +74,9 @@ if (year == 2015) {
 } else {
   alert( 'How can you be so wrong?' ); // any value except 2015
 }
+
 '''
+
 **La clause "else if".**
 
 Parfois nous amerions tester plusieurs variantes d'une condition. La clause "else if" nous permet de le faire.
@@ -76,6 +85,7 @@ Parfois nous amerions tester plusieurs variantes d'une condition. La clause "els
  let year = prompt('In which year was the ECMAScript-2015 specification published?', '');
 
 '''
+
 if (year < 2015) {
   alert( 'Too early...' );
 } else if (year > 2015) {
@@ -83,7 +93,9 @@ if (year < 2015) {
 } else {
   alert( 'Exactly!' );
 }
+
 '''
+
 Dans le code ci-dessus, JavaScript vérifie d'abord l'année <2015. S'il sagit d'une erreur, il passera à l'ànnée de conditon
 suivante >2015. S'il sagit également d'une erreur la derniere alerte est affichée.
 
@@ -95,6 +107,7 @@ Il peut y avoir plus de blocks else if. Et le block final "esle" est optionel
 parfois, nous devons affecter une variable en fonction d'une condition .
 
 '''
+
 let accessAllowed;
 let age = prompt('How old are you?', '');
 
@@ -105,6 +118,7 @@ if (age > 18) {
 }
 
 alert(accessAllowed);
+
 '''
 
 l'opérateur dit <<conditionnel>> ou <<point d'interrogation>> nous premet de le faire d'une maniére plus simple et plus rapide.
@@ -130,19 +144,26 @@ techniquement, nous pouvons omettre les parenthése age<22. l'opérateur de (?) 
 
 
 **cet exemple fera la méme fonction que la précedente :**
+
 '''
+
 // the comparison operator "age > 18" executes first anyway
 // (no need to wrap it into parentheses)
 let accessAllowed = age > 18 ? true : false;>
+
 '''
+
 mais les parenthéses rendent le code plus lisible.
 
 **À noter:**
 
 dans ce exemple, on peut eviter d'utiliser l'opérateur de point d'interrogation, car la comparaison renvoie true or false :
+
 '''
+
 <// the same
 let accessAllowed = age > 18;>
+
 '''
  
 **multiple '?' :**
@@ -150,7 +171,9 @@ let accessAllowed = age > 18;>
 une séquence d'opérateurs de (?) peut renvoyer une valeur qui dépend de plusieurs conditions .
 
 **exemple:**
+
 '''
+
 let age = prompt('age?', 18);
 
 let message = (age < 3) ? 'Hi, baby!' :
@@ -159,6 +182,7 @@ let message = (age < 3) ? 'Hi, baby!' :
   'What an unusual age!';
 
 alert( message );
+
 '''
 
 au début, sa se peut étre difficile, mais faut juste regarder plus prét pour constater qu'il sagit d'une séquence de tests ordinaire:
@@ -171,7 +195,9 @@ Si c'est vrai, ça revient 'Greetings!'. Sinon, il continue à l'expression apr�
 
 
 **et ça ressemble a sa en utilisant if..else:**
+
 '''
+
 if (age < 3) {
   message = 'Hi, baby!';
 } else if (age < 18) {
@@ -181,6 +207,7 @@ if (age < 3) {
 } else {
   message = 'What an unusual age!';
 }
+
 '''
 
 Utilisation non traditionnelle de '?':
@@ -203,6 +230,7 @@ la notation la plus courte que l' if instruction équivalante, ce qui plaît à 
 **voila on utilise le méme code if pour la comparaison:**
 
 '''
+
 let company = prompt('Which company created JavaScript?', '');
 
 if (company == 'Netscape') {
@@ -210,6 +238,7 @@ if (company == 'Netscape') {
 } else {
   alert('Wrong.');
 }
+
 '''
 
 Nos yeux scannent le code verticalement.les blocs de code qui couvrent plusieurs lignes sont plus faciles à comprendre qu'un long jeu d'instructions horizontales.
